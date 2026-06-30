@@ -26,6 +26,24 @@ The platform is designed as a localized container monolith (Service Mesh Monolit
  (Write-Through)                       (Sliding Window)
 ```
 
+---
+
+## Architectural Roadmap & Evolution Strategy
+
+The Flagship ecosystem is built using a milestone-driven evolution layout. Each phase transitions the ecosystem into higher performance brackets, systematically identifying and resolving distributed systems bottlenecks.
+
+| Phase | Milestone | Core Focus | Architecture Impact | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **v0.1** | **Container Monolith Base** | Orchestrated REST Core | Edge Ingress routing, multi-language container isolation | **Released** |
+| **v0.2** | **Source of Truth & Hydration** | Reliable State Handling | Write-Through pattern to PostgreSQL; ultra-fast reads from Redis | *In Progress* |
+| **v0.3** | **Sidecar Latency Optimization** | gRPC Communication Layer | Migrate inter-service checks to gRPC to eliminate HTTP/1.1 HoL blocking | *Planned* |
+| **v0.4** | **High-Perf Edge Layer** | Global gRPC Ingress | Transition public edge routing to utilize Protocol Buffers & HTTP/2 streaming | *Planned* |
+| **v0.5** | **Advanced Targeting Engine**| Contextual Flag Evaluation | Abstract rule-matching evaluation engines beyond simple primitives | *Planned* |
+| **v0.6** | **Distributed Event Bus** | Real-Time Cache Sync | Integrate RabbitMQ/Kafka to synchronize cache states across cross-region nodes | *Planned* |
+| **v0.7** | **Cloud-Native Scale** | Infrastructure as Code | Multi-AZ AWS ECS Fargate deployment automated via Terraform | *Planned* |
+
+---
+
 ## Sibling Repositories
 The core ecosystem is decoupled across distinct, agnostic portfolio repositories:
 * **Core Flag Engine (Go):** [flagship](https://github.com/NGUgeneral/flagship)
